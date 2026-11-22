@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selçuklu Sultanları</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="bg-dark text-white text-center p-5">
+        <h1>Selçuklu Sultanları</h1>
+        <p>Türk tarihinin önemli devletlerini keşfedin</p>
+    </header>
+
+    <main class="container my-5">
+
+        <section class="text-center mb-4">
+            <h2>Selçuklu Tarihine Hoş Geldiniz</h2>
+            <p>Bu web sitesinde Selçuklu sultanlarını ve önemli tarihi olayları öğrenebilirsiniz.</p>
+            <p>Sultan Sayısı: <strong id="sultanSayisi">0</strong></p>
+            <p>Savaş ve Olay Sayısı: <strong id="savasSayisi">0</strong></p>
+        </section>
+
+        <hr>
+
+        <section class="mb-5">
+            <h2>Sultanlar</h2>
+
+            <input type="text" id="arama" class="form-control my-3" placeholder="Sultan ara...">
+
+            <select id="devletSecim" class="form-select mb-3">
+                <option value="hepsi">Bütün Sultanlar</option>
+                <option value="buyuk">Büyük Selçuklu</option>
+                <option value="turkiye">Türkiye Selçuklu</option>
+            </select>
+
+            <p id="bilgi"></p>
+            <div class="row g-3" id="sultanListesi"></div>
+        </section>
+
+        <hr>
+
+        <section class="mb-5">
+            <h2>Savaşlar ve Önemli Olaylar</h2>
+
+            <button id="tabloButon" class="btn btn-dark my-3">
+                Tabloyu Gizle
+            </button>
+
+            <div id="tabloAlani">
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Yıl</th>
+                                <th>Olay</th>
+                                <th>Sultan</th>
+                                <th>Karşı Taraf</th>
+                                <th>Sonuç</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabloGovde"></tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="mb-5">
+            <h2>Bilgi Yarışması</h2>
+
+            <form id="quizForm">
+                <div id="sorular"></div>
+
+                <button type="submit" class="btn btn-success mt-3">
+                    Sonucu Göster
+                </button>
+
+                <button type="reset" class="btn btn-secondary mt-3">
+                    Sıfırla
+                </button>
+            </form>
+
+            <div id="quizSonuc" class="mt-3"></div>
+        </section>
+
+        <hr>
+
+        <section class="mb-5">
+            <h2>İletişim</h2>
+
+            <form id="iletisimForm">
+                <input type="text" id="ad" class="form-control mb-3" placeholder="Adınız">
+
+                <input type="email" id="email" class="form-control mb-3" placeholder="E-posta adresiniz">
+
+                <textarea id="mesaj" class="form-control mb-2" rows="4" placeholder="Mesajınız"></textarea>
+
+                <p>Karakter sayısı: <span id="sayac">0</span></p>
+
+                <button type="submit" class="btn btn-primary">
+                    Gönder
+                </button>
+
+                <p id="formMesaj" class="mt-3"></p>
+            </form>
+        </section>
+
+    </main>
+
+    <footer class="bg-dark text-white text-center p-3">
+        <p>Selçuklu Sultanları | İnternet Programcılığı Projesi</p>
+    </footer>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
